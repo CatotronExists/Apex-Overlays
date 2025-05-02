@@ -1,5 +1,5 @@
 # Apex Overlays: Nameplate
-This is a basic nameplate overlay that dynamically updates the username on the nameplate based on who is currently being spectated.
+This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.
 
 ## Setup
 On top of these [basic requirements](https://github.com/CatotronExists/Apex-Overlays/tree/main#requirements), you will also need to install:\

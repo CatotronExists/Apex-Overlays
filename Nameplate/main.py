@@ -49,59 +49,11 @@ async def filter_events(event):
                     ws.call(requests.SetInputSettings(inputName=text_box, inputSettings={"text": player_username})) # Change text to new player name
                     ws.disconnect()
 
-with open("Assets/04-19-2024-08-46-41_modified.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
+async def main():
+    # Start the API
+    api_task = asyncio.create_task(LiveApex.Core.startLiveAPI())
+    listener_task = asyncio.create_task(LiveApex.Core.startListener(filter_events))
 
-line_no = 1
-for line in data:
-    print(f"LINE: {line_no} || {line}")
-    asyncio.run(filter_events(line)) # Call the filter_events function with the current line of data
-    line_no += 1
-    time.sleep(0.005)
+    await asyncio.gather(api_task, listener_task)
 
-# players = []
-# for line in data:
-#     if line['category'] == "playerConnected":
-#         if line['player']['name'] not in players:
-#             if line['player']['name'] != observer_name: 
-#                 players.append(line['player']['name'])
-
-# def replace_all(data, target, replacement):
-#     if isinstance(data, dict):
-#         return {k: replace_all(v, target, replacement) for k, v in data.items()}
-#     elif isinstance(data, list):
-#         return [replace_all(item, target, replacement) for item in data]
-#     elif data == target:
-#         return replacement
-#     else:
-#         return data
-
-# num = 1
-# for player in players:
-#     random_name = f"catotron_p{num}"
-
-#     data = replace_all(data, player, random_name)
-    
-#     print(f"Replaced {player} with {random_name}")
-#     num = num + 1
-
-# # Save the modified JSON back to a file
-# with open("Assets/04-19-2024-08-46-41_modified.json", "w", encoding="utf-8") as f:
-#     f.write("[\n")
-
-#     for i, entry in enumerate(data):
-#         if i == len(data) - 1:
-#             f.write(json.dumps(entry) + "\n")
-#         else:
-#             f.write(json.dumps(entry) + ",\n")
-
-#     f.write("]")
-
-# async def main():
-#     # Start the API
-#     api_task = asyncio.create_task(LiveApex.Core.startLiveAPI())
-#     listener_task = asyncio.create_task(LiveApex.Core.startListener(filter_events))
-
-#     await asyncio.gather(api_task, listener_task)
-
-# asyncio.run(main())
+asyncio.run(main())

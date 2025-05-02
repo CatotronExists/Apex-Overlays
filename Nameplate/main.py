@@ -1,8 +1,6 @@
 import LiveApex
 import asyncio
 from obswebsocket import obsws, requests
-import json
-import time
 
 #per_legend_plate = False # Set to True if you want to have a different nameplate for each legend, otherwise a single nameplate will be used for all legends/players
 observer_name = "" # This is the name of the observer in Apex Legends, required as multiple observers can be present in the game

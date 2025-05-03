@@ -15,7 +15,7 @@ In OBS import your nameplate overlay as an image and adjust as needed.\
 Then, add a new text box and adjust the font and size as needed then postion it on the nameplate.\
 (Make sure the text box is above the nameplate image in the sources list)
 
-Now open ```main.py``` and adjust the following variables:
+Now download and open ```main.py``` and adjust the following variables:
 - ```observer_name``` - The name of the observer. 
 - ```scene``` - The name of the scene in OBS where the nameplate is located.
 - ```text_box``` - The name of the text box in OBS.

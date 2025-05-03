@@ -1,6 +1,12 @@
 # Apex Overlays: Nameplate
 This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.
 
+## Usage
+1. Follow setup instructions below to set up the overlay.
+2. Start Apex Legends
+3. Run ```main.py``` and it will automatically detect when a game begins and ends.
+4. Thats it!
+
 ## Setup
 On top of these [basic requirements](https://github.com/CatotronExists/Apex-Overlays/tree/main#requirements), you will also need to install:\
 obs-websocket-py ```pip install obs-websocket-py```
@@ -17,6 +23,8 @@ Now open ```main.py``` and adjust the following variables:
 
 Optionally you can also adjust:
 - ```password```
+
+*You can open python files using VSCode or open in notepad*
 
 ![Guide](https://github.com/user-attachments/assets/9e04ecd3-a6a4-46ac-a0f6-3cec5ff3acb5)
 

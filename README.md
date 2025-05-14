@@ -22,4 +22,4 @@ Python 3.12 or higher
 
 LiveApex ```pip install LiveApex```
 
-Include ```+cl_liveapi_enabled 1``` in your steam launch options for Apex Legends.
+Include ```+cl_liveapi_enabled 1``` & ```+cl_liveapi_ws_servers "ws://127.0.0.1:7777"``` in your steam launch options

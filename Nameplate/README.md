@@ -36,7 +36,7 @@ Setup is now complete.\
 *You can also now hide both the nameplate image and text box in OBS if you want as they automatically show when the game begins.*
 
 ## Example Video
-https://github.com/user-attachments/assets/f685470f-d05a-45a4-a874-1ff0b13ddbf5
+
+https://github.com/user-attachments/assets/d4e8c00e-0053-4ae5-9d1f-3810fc8307eb
 
 *Nameplate and text box both appear when a game begins and then both disappear when the game ends.*\
-*Here I am reading data from a file to simulate what this looks like*

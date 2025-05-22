@@ -1,5 +1,5 @@
 # Apex Overlays: Nameplate
-This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.
+This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.\
 **This will only work in OBS**
 
 ## Usage

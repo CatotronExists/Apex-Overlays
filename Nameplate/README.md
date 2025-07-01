@@ -1,6 +1,5 @@
 # Apex Overlays: Nameplate
-This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.\
-**This will only work in OBS**
+This is a basic nameplate overlay that dynamically updates the username on a custom nameplate based on who is currently being spectated.
 
 ## Usage
 1. Follow setup instructions below to set up the overlay.
@@ -21,6 +20,9 @@ Now download and open ```main.py``` and adjust the following variables:
 - ```scene``` - The name of the scene in OBS where the nameplate is located.
 - ```text_box``` - The name of the text box in OBS.
 - ```nameplate``` - The name of the nameplate image in OBS.
+and if you a putting both elements into a folder, adjust these two variables
+- ```in_folder```
+- ```folder_name```
 
 Optionally you can also adjust:
 - ```password```

@@ -19,7 +19,8 @@ Now download and open ```main.py``` and adjust the following variables:
 - ```observer_name``` - The name of the observer. 
 - ```scene``` - The name of the scene in OBS where the nameplate is located.
 - ```text_box``` - The name of the text box in OBS.
-- ```nameplate``` - The name of the nameplate image in OBS.
+- ```nameplate``` - The name of the nameplate image in OBS.\
+
 and if you a putting both elements into a folder, adjust these two variables
 - ```in_folder```
 - ```folder_name```

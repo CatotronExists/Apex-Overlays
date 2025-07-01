@@ -93,7 +93,6 @@ async def testfunc():
     ws.disconnect()
 
 async def main():
-    await testfunc()
     # Start the API
     api_task = asyncio.create_task(LiveApex.Core.startLiveAPI())
     listener_task = asyncio.create_task(LiveApex.Core.startListener(filter_events))

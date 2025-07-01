@@ -69,29 +69,6 @@ async def filter_events(event):
                     ws.call(requests.SetInputSettings(inputName=text_box, inputSettings={"text": player_username})) # Change text to new player name 
                     ws.disconnect()
 
-async def testfunc():
-    ws.connect()
-
-    target = [text_box, name_plate]
-    if in_folder == True:
-        response = ws.call(requests.GetGroupSceneItemList(sceneName=folder_name))
-
-        scene_items = response.getSceneItems()
-        scene_item_ids = [item['sceneItemId'] for item in scene_items if item.get('sourceName') in target and 'sceneItemId' in item]
-        
-        for id in scene_item_ids:
-            ws.call(requests.SetSceneItemEnabled(sceneName=folder_name, sceneItemId=id, sceneItemEnabled=True)) # Enable item
-        
-        ws.call(requests.SetInputSettings(inputName=text_box, inputSettings={"text": "if your reading this, then it worked"}))
-
-    else:
-        for item in target:
-            response = ws.call(requests.GetSceneItemId(sceneName=scene, sourceName=item)) # Enable item
-            itemId = response.datain['sceneItemId']
-            ws.call(requests.SetSceneItemEnabled(sceneName=scene, sceneItemId=itemId, sceneItemEnabled=True))
-
-    ws.disconnect()
-
 async def main():
     # Start the API
     api_task = asyncio.create_task(LiveApex.Core.startLiveAPI())
